@@ -9,13 +9,15 @@
 /* jenis font untuk semuanya */
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #c5d3e4;
 }
+
 /* navbar atas */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4660a8;
+    background-color: #020d2b;
     color: white;
     padding: 10px 20px;
 }
@@ -39,30 +41,16 @@ body {
 .navbar .text-footer {
     margin-left: 100px;
 }
+
 /* bagian definisi */
 .definition {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    padding: 40px;
-    background-color: #e9ecef;
-    height: 600px;
-    width: 100%;
-    gap: 20px;
-}
-
-.definition .text {
-    max-width: 700px;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-.definition img {
-    width: 300px;
-    height: auto;
+    width: 60%;
+    margin: 15px auto; 
+    padding: 20px 40px 20px 40px;
+    background: #a9bde2;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+    font-style: italic;
 }
 
 /* kalkulator bmi */
@@ -71,13 +59,14 @@ body {
     padding: 20px;
     border-radius: 8px;
     width: 60%;
-    height: 600px;
+    height: 450px;
     margin-left: 20%;
-    margin-top: 30px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
 }
 
 .calculator .form-group {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .calculator label {
@@ -85,6 +74,7 @@ body {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 /* input sebuah angka berat badan, tinggi badan, dan umur */
 .calculator input[type="number"] {
     width: 100%;
@@ -92,10 +82,12 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 /* input gender */
 .form-group input[type="radio"] {
     margin-right: 5px; 
 }
+
 .calculator button {
     padding: 10px 15px;
     border: none;
@@ -113,14 +105,25 @@ body {
     background-color: #333;
 }
 
+/* Explanation */
+.explanation {
+    width: 60%;
+    margin: 15px auto; 
+    padding: 20px 40px 20px 40px;
+    background: #a9bde2;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+    text-align: justify;
+}
+
 /* hasil kalkulator */
 .result-calcu {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 12px;
-    max-width: 600px;
+    width: 60%;
     margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
 }
 
 .result h2 {
@@ -174,19 +177,18 @@ body {
 
 .button2 {
     display: inline-block;
-    background-color: #1e88e5;
+    background-color: #07014e;
     color: white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
-    margin-left: 50px;
+    margin-left: 120px;
     font-size: 14px;
-    transition: background-color 0.3s;
 }
 
 .button2:hover {
-    background-color: #1565c0;
+    background-color: #6086b4;
 }
 
 #underweight {
@@ -207,80 +209,50 @@ body {
     border-radius: 8px;
 }
 
-/* tampilan agar lebih responsif di mobile */
+/* Notifikasi */
+.notification {
+    display: none;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.notification.show {
+    display: block;
+}
+
+/* Responsif untuk perangkat mobile */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .definition {
+    .logo-container {
         flex-direction: column;
-        height: auto;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .definition img {
-        width: 100%;
-        max-width: 250px;
+        align-items: flex-start;
     }
 
     .calculator {
         width: 90%;
         margin-left: 5%;
-        height: auto;
-        padding: 20px;
+    }
+
+    .definition, .explanation {
+        width: 90%;
+        margin-left: 5%;
     }
 
     .result-calcu {
         width: 90%;
+        margin-left: 5%;
     }
 
     .button2 {
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .status h1 {
-        font-size: 32px;
-    }
-
-    .status h3 {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .logo-container img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .calculator input[type="number"] {
-        font-size: 14px;
-        padding: 6px;
-    }
-
-    .calculator button {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .status h1 {
-        font-size: 28px;
-    }
-
-    .result-calcu {
-        padding: 15px;
-    }
-
-    .definition img {
-        max-width: 200px;
+        margin-left: 10px;
     }
 }
