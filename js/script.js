@@ -1,3 +1,4 @@
+// code kalkulator bmi
 document.addEventListener("DOMContentLoaded", function () {
     const bmiButton = document.getElementById("hitung-bmi");
     const notification = document.getElementById("notification");

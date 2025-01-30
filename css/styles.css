@@ -212,7 +212,7 @@ body {
     border-radius: 8px;
 }
 
-/* Notifikasi */
+/* Notifikasi apabila tidak mengisi semua data */
 .notification {
     display: none;
     background-color: #f8d7da;
