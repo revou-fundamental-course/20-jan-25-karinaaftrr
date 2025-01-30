@@ -1,4 +1,4 @@
-/* font */
+/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -7,13 +7,14 @@
     box-sizing: border-box;
 }
 
-/* jenis font untuk semuanya */
+/* Font untuk semua elemen */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #c5d3e4;
+    font-size: clamp(14px, 2.5vw, 18px);
 }
 
-/* navbar atas */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -27,6 +28,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-align: center;
 }
 
 .navbar img {
@@ -40,29 +42,28 @@ body {
 }
 
 .navbar .text-footer {
-    margin-left: 100px;
+    text-align: left;
 }
 
-/* bagian definisi */
+/* Bagian definisi */
 .definition {
     width: 60%;
     margin: 15px auto; 
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px;
     background: #a9bde2;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgb(0, 0, 0);
     font-style: italic;
 }
 
-/* kalkulator bmi */
+/* Kalkulator BMI */
 .calculator {
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 8px;
     width: 60%;
-    height: 450px;
-    margin-left: 20%;
-    margin-top: 20px;
+    height: auto;
+    margin: 20px auto;
     box-shadow: 0 2px 10px rgb(0, 0, 0);
 }
 
@@ -76,7 +77,6 @@ body {
     font-weight: bold;
 }
 
-/* input sebuah angka berat badan, tinggi badan, dan umur */
 .calculator input[type="number"] {
     width: 100%;
     padding: 8px;
@@ -84,9 +84,8 @@ body {
     border-radius: 4px;
 }
 
-/* input gender */
 .form-group input[type="radio"] {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .calculator button {
@@ -106,18 +105,18 @@ body {
     background-color: #333;
 }
 
-/* Explanation */
+/* Penjelasan */
 .explanation {
     width: 60%;
     margin: 15px auto; 
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px;
     background: #a9bde2;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgb(0, 0, 0);
     text-align: justify;
 }
 
-/* hasil kalkulator */
+/* Hasil kalkulator */
 .result-calcu {
     background-color: #f9f9f9;
     padding: 20px;
@@ -152,6 +151,9 @@ body {
 
 .content {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .content h4 {
@@ -184,8 +186,8 @@ body {
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
-    margin-left: 120px;
-    font-size: 14px;
+    margin-right: 10px;
+    font-size: 12px;
 }
 
 .button2:hover {
@@ -228,32 +230,39 @@ body {
 
 /* Responsif untuk perangkat mobile */
 @media screen and (max-width: 768px) {
+    body {
+        font-size: clamp(12px, 2vw, 16px);
+    }
+
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        padding: 10px;
+        gap: 10px;
     }
 
     .logo-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+    
+    .calculator, .definition, .explanation, .result-calcu {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        box-sizing: border-box;
     }
 
-    .calculator {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    .definition, .explanation {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    .result-calcu {
-        width: 90%;
-        margin-left: 5%;
+    input[type="number"], button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+        border-radius: 8px;
     }
 
     .button2 {
-        margin-left: 10px;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 14px;
     }
 }
